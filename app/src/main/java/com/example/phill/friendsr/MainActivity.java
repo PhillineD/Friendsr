@@ -3,7 +3,10 @@ package com.example.phill.friendsr;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -11,10 +14,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+
 
     ArrayList<Friend> friends = new ArrayList<>();
 
+    // make all friends
     Friend actor1 = new Friend("Arya","Third Child", getResources().getIdentifier("arya","drawable",MainActivity.this.getPackageName()));
     Friend actor2 = new Friend("Cersei"," Child", getResources().getIdentifier("cersei","drawable",MainActivity.this.getPackageName()));
     Friend actor3 = new Friend("Jaime","Third Child", getResources().getIdentifier("jaime","drawable",MainActivity.this.getPackageName()));
@@ -25,5 +29,19 @@ public class MainActivity extends AppCompatActivity {
     Friend actor8 = new Friend("Sansa","Third Child", getResources().getIdentifier("sansa","drawable",MainActivity.this.getPackageName()));
     Friend actor9 = new Friend("Tyrion","Third Child", getResources().getIdentifier("tyrion","drawable",MainActivity.this.getPackageName()));
 
+    // adding al friends
+    friends.add(actor1);
+    friends.add(actor2);
+    friends.add(actor3);
+    friends.add(actor4);
+    friends.add(actor5);
+    friends.add(actor6);
+    friends.add(actor7);
+    friends.add(actor8);
+    friends.add(actor9);
 
+    //    instantiate your adapter
+    FriendsAdapter adapter = new FriendsAdapter(this,R.layout.grid_item, friends   );
+
+    }
 }
