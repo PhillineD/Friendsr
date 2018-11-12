@@ -17,7 +17,6 @@ import android.support.annotation.Nullable;
 
 
 
-
 public class FriendsAdapter extends ArrayAdapter<Friend> {
 
     public TextView FriendName;
