@@ -20,7 +20,6 @@ public class ProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
         Intent intent = getIntent();
 
         //  holds a reference to the parent view with all the items, give you what item is present on that position in the parent layout
