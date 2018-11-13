@@ -59,6 +59,8 @@ public class ProfileActivity extends AppCompatActivity {
             // there is nothing stored under "example_key", the rating bar can stay blank
             stars.setRating(0.0f);
         }
+
+    //  to save the changes
         editor.apply();
 
     }
