@@ -21,6 +21,7 @@ public class FriendsAdapter extends ArrayAdapter<Friend> {
 
     public TextView FriendName;
     public  ImageView FriendPhoto;
+
     //    the constructor that takes context, a resource id of type integer and a list of items
     public FriendsAdapter( Context context, int resource,  ArrayList<Friend> objects) {
         super(context, resource, objects);

@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-    ArrayList<Friend> friends = new ArrayList<>();
+        // an ArrayList of sample friends since we are storing friends- objects
+        ArrayList<Friend> friends = new ArrayList<>();
 
     // make all friends
     Friend actor1 = new Friend("Arya","Arya Stark is the third child and second daughter of Lord Eddard Stark and his wife, Lady Catelyn Stark. After narrowly escaping the persecution of House Stark by House Lannister, Arya is trained as a Faceless Man at the House of Black and White in Braavos, and uses her new skills to bring those who have wronged her family to justice.", getResources().getIdentifier("arya","drawable",MainActivity.this.getPackageName()));
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     //    instantiate your adapter
     FriendsAdapter adapter = new FriendsAdapter(this,R.layout.grid_item, friends   );
 
-    // attach the adapter to GridVie
+    // attach the adapter to GridView
     GridView gridView = findViewById(R.id.gridView);
     gridView.setAdapter(adapter);
     gridView.setOnItemClickListener(new GridItemClickListener());
@@ -65,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
 //            connect this listener to the GridView
             Friend clickedFriend = (Friend) adapterView.getItemAtPosition(position);
-            Log.d("MainActivity.java", "Friend: " + clickedFriend.getName());
+
+//           intent to  pass this information to the next activity : Profile Activity
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             intent.putExtra("clicked_friend_key", clickedFriend);
             startActivity(intent);

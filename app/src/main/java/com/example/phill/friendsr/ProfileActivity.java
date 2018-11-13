@@ -24,7 +24,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         //  holds a reference to the parent view with all the items, give you what item is present on that position in the parent layout
         Friend retrievedFriend = (Friend) intent.getSerializableExtra("clicked_friend_key");
-        Log.d("ProfileActivity.java", "Friend: " + retrievedFriend.getName());
 
 //         place name
         name= findViewById(R.id.secondtextview);
