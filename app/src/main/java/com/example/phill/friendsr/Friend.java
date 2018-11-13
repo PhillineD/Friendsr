@@ -1,3 +1,6 @@
+// Philline Dikker: 12317608
+// Week 3: Friendsr
+
 package com.example.phill.friendsr;
 
 import java.io.Serializable;
